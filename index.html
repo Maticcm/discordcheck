@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>VPN Check</title>
-  <link rel="icon" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    p {
+      font-size: 1.5em;
+    }
+  </style>
   <script>
     fetch('https://api.ipify.org?format=json')
       .then(r => r.json())
@@ -13,7 +28,7 @@
           alert('You are not connected to a VPN');
           window.location.href = 'https://google.com';
         } else {
-          window.location.href = 'https://discord.com/channels/@me';
+          window.location.href = 'https://discord.com';
         }
       });
   </script>
