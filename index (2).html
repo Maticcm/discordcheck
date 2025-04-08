@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>VPN Check</title>
+  <link rel="icon" href="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico">
+  <script>
+    fetch('https://api.ipify.org?format=json')
+      .then(r => r.json())
+      .then(d => {
+        const myIP = d.ip;
+        if (myIP === '90.157.164.207') {
+          alert('You are not connected to a VPN');
+          window.location.href = 'https://google.com';
+        } else {
+          window.location.href = 'https://discord.com/channels/@me';
+        }
+      });
+  </script>
+</head>
+<body>
+  <p>Checking your VPN connection...</p>
+</body>
+</html>
